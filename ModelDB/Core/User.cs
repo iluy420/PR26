@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ModelDB.Core
 {
-    [Table("User")]
+    [Table(nameof(User))]
     public class User
     {
         [Key]

@@ -12,7 +12,7 @@ namespace UnitTestProject
         public void RegistrationTestSuccess1()
         {
             var page = new Registration();
-            Assert.IsFalse(page.Reg("","","", "Cashier"));//пустые значения      
+            Assert.IsFalse(page.Reg("","","", "Cashier"));//пустые значения          
         }
 
         [TestMethod]

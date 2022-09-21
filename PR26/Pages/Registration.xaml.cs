@@ -31,7 +31,7 @@ namespace PR26.Pages
                     TextBlock role = new TextBlock();
                     role.Text = item.ToString();
                     ComboBoxRole.Items.Add(role);
-                    if (item.ToString() == "Cashier")
+                    if (item.ToString() == nameof(Role.Cashier))
                     {
                         ComboBoxRole.SelectedItem = role;
                     }
@@ -43,6 +43,9 @@ namespace PR26.Pages
         private void RegButton_Click(object sender, RoutedEventArgs e)
         {
             Reg(TextBoxLogin.Text, Password.Password, PasswordCopy.Password, ComboBoxRole.Text);
+            TextBoxLogin.Clear();
+            Password.Clear();
+            PasswordCopy.Clear();
         }
 
         public bool Reg(string loginUser, string password, string passwordCopy, string role)
@@ -134,9 +137,6 @@ namespace PR26.Pages
                     db.Users.Add(userObject);
                     db.SaveChanges();
                     MessageBox.Show("Пользователь зарегистрирован!");
-                    TextBoxLogin.Clear();
-                    Password.Clear();
-                    PasswordCopy.Clear();
                     return true;
                 }
             }

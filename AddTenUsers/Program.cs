@@ -29,6 +29,7 @@ namespace AddTenUsers
                     SaveObjectsAsync(user).Wait();
                     Console.WriteLine($"Загрузка пользователя: {user.Login} в бд завершена");
                 }
+                Console.WriteLine("Все пользователи загружены в бд УСПЕШНО!");
                 Console.ReadLine();
             }
             catch
